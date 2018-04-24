@@ -161,3 +161,16 @@ body {
   animation : test2 120s infinite;
 }
 
+.reset {
+  padding : 10px;
+  margin-top : 3px;
+  text-align: center;
+  color: white;
+  background : black;
+  transition : 0.6s ease-in;
+}
+
+.reset:hover {
+  color : black;
+  background : white;
+}
