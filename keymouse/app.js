@@ -1,10 +1,14 @@
-let handleClick = function(e) {
-  button.style.display = "none";
-};
 
-let button = document.querySelectorAll('.hoverMe');
+
+let button = document.querySelectorAll('.hoverMe, .nose, .miam');
 
 button.forEach(function(b){
-   b.addEventListener('mouseover', handleClick.bind(b));
+
+
+   let handleClick = function(e) {
+    b.style.visibility = "hidden";
+  };
+
+  b.addEventListener('mouseover', handleClick);
 });
 
