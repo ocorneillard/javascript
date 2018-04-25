@@ -1,6 +1,27 @@
 .character {
+  height : 5vh;
+  width : 100%;
+
+  background : turquoise;
+  border : 1px solid beige;
+}
+
+.up, .down, .left, .right {
+  display : inline-block;
   height : 20vh ; 
-  width : 50vw;
+  width : 20vw;
+  margin : 2%;
   
-  background: red;
+  background: bisque;
+  border : 1px solid burlywood;
+}
+
+.highlight {
+  display : inline-block;
+  height : 20vh ; 
+  width : 20vw;
+  margin : 2%;
+  opacity : 0.40;
+  background: bisque;
+  border : 1px solid burlywood;
 }
