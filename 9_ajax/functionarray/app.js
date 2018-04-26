@@ -2,13 +2,17 @@ const xhr = new XMLHttpRequest();
 xhr.open('GET', 'data.json', true);
 let people = "";
 
+// xhr.ReadyStateChange
+// xhr.fetch()
 xhr.onload = function () {
 
     // if connection is correct
     if (xhr.status === 200) {
-
+        console.log(this.readyState);
         // Take data from json
+        console.log(this.responseText);
        let people = JSON.parse(this.responseText);
+       console.log(people);
 
        // Give persons a random score
         for (i = 0 ; i < people.length; i++) {
