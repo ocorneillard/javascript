@@ -1,18 +1,26 @@
 let affichage = document.querySelector(".affichage");
+let clickH = document.querySelector(".click");
 let affichageMultiply = document.querySelector(".multiply");
-(".affichage");
+let multiplicator = document.querySelector(".multiplicator");
 let score = 0;
 let multiple = 1;
 let click = 1;
 
-function add() {
+function add(e) {
   score = score + (click * multiple);
   affichage.innerHTML = score;
 }
 
-// function multiply() {
-//   multiple++;
-//   affichageMultiply.innerHTML = multiple;
-// }
+function multiply(e) {
+  if (score > 50) {
+  multiple++;
+  multiplicator.innerHTML = `Multiplicator x${multiple}`;
+  affichageMultiply.innerHTML = multiple;
+  score = score - 50;
+  } else {
 
-document.addEventListener("click", add);
+  }
+}
+
+clickH.addEventListener("click", add);
+multiplicator.addEventListener("click", multiply);
