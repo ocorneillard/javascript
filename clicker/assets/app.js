@@ -3,11 +3,14 @@ let clickH = document.querySelector(".click");
 let affichageMultiply = document.querySelector(".multiply");
 let multiplicator = document.querySelector(".multiplicator");
 let autoclicker = document.querySelector(".autoclicker");
+let bonus = document.querySelector(".bonus");
 
-let score = 500;
+
+let score = 5000;
 let multiple = 1;
-let click = 1;
 let auto;
+let click = 1;
+let test = 0;
 
 function add(e) {
   score = score + (click * multiple);
@@ -22,10 +25,28 @@ function multiply(e) {
   } 
 }
 
-function autoclick(e) {
-  if (score > 500) {
-    score++;
-  } 
+
+function verifyAutoclick() {
+    if ( score >= 500 && test=== 0){
+      score = score - 500;
+      test = setInterval(autoclick, 1000);
+    }
+  }
+
+function autoclick() {
+  score++;
+}
+
+function bonux() {
+  if (score >= 5000) {
+    score = score - 5000;
+  multiple =  multiple * 2;
+  setTimeout(endBonux, 30000);
+}
+}
+
+function endBonux() {
+  multiple = multiple / 2;
 }
 
 function affiche() {
@@ -34,6 +55,6 @@ function affiche() {
 
 clickH.addEventListener("click", add);
 multiplicator.addEventListener("click", multiply);
-autoclicker.addEventListener("click", autoclick);
-auto = setInterval(autoclick, 1000);
+autoclicker.addEventListener("click", verifyAutoclick);
+bonus.addEventListener("click", bonux);
 let reload = setInterval(affiche, 10);
