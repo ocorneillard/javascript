@@ -6,11 +6,12 @@ let autoclicker = document.querySelector(".autoclicker");
 let bonus = document.querySelector(".bonus");
 
 
-let score = 5000;
+let score = 40;
 let multiple = 1;
 let auto;
 let click = 1;
 let test = 0;
+let checkMulti = 0;
 
 function add(e) {
   score = score + (click * multiple);
@@ -51,10 +52,30 @@ function endBonux() {
 
 function affiche() {
   affichage.innerHTML = score;
+  if (score > (50* multiple)) {
+  something();
+  }
+
 }
 
 clickH.addEventListener("click", add);
 multiplicator.addEventListener("click", multiply);
 autoclicker.addEventListener("click", verifyAutoclick);
 bonus.addEventListener("click", bonux);
-let reload = setInterval(affiche, 10);
+let reload = setInterval(affiche, 100);
+
+
+var something = (function() {
+  var executed = false;
+  return function() {
+      if (!executed) {
+          executed = true;
+            let displayMultiplicator = document.createElement("button");
+            let newContent = document.createTextNode(`Multiplicator`);
+            displayMultiplicator.appendChild(newContent);
+            let placeMulti = document.querySelector(".multi");
+            placeMulti.appendChild(displayMultiplicator);
+      }
+  };
+})();
+
