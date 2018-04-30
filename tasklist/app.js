@@ -14,6 +14,8 @@ loadEventListeners();
 
 function loadEventListeners() {
 
+  document.addEventListener('DOMContentLoaded', getTasks);
+
   form.addEventListener('submit', addTask);
 
   taskList.addEventListener('click', removeTask);
@@ -21,6 +23,18 @@ function loadEventListeners() {
   clearBtn.addEventListener('click', clearTask);
 
   filter.addEventListener('keyup', filterTask);
+}
+
+// Get tasks from LS
+
+function getTasks() {
+  let tasks ;
+  if (localStorage.getItem('tasks') === null) {
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+  }
+  
 }
 
 // Add Task
@@ -47,11 +61,26 @@ function addTask(e) {
   // append li to ul
   taskList.appendChild(li);
 
+  // store it
+  storeTaskInLocaleStorage(taskInput.value);
+
   taskInput.value= '';
   console.log(li);
 }
 
   e.preventDefault();
+}
+
+function storeTaskInLocaleStorage(e) {
+  let tasks ;
+  if (localStorage.getItem('tasks') === null) {
+    tasks = [];
+  } else {
+    tasks = JSON.parse(localStorage.getItem('tasks'));
+  }
+
+  tasks.push(task);
+  localStorage.setItem('tasks', JSON.stringify(tasks));
 }
 
 function removeTask(e) {

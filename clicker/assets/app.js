@@ -23,7 +23,7 @@ function multiply(e) {
   multiple++;
   multiplicator.innerHTML = `Multiplicator x${multiple} Cost for upgrade : ${(50*multiple)}`;
   affichageMultiply.innerHTML = multiple;
-  } 
+  }
 }
 
 
@@ -65,17 +65,13 @@ bonus.addEventListener("click", bonux);
 let reload = setInterval(affiche, 100);
 
 
-var something = (function() {
-  var executed = false;
-  return function() {
-      if (!executed) {
-          executed = true;
-            let displayMultiplicator = document.createElement("button");
-            let newContent = document.createTextNode(`Multiplicator`);
-            displayMultiplicator.appendChild(newContent);
-            let placeMulti = document.querySelector(".multi");
-            placeMulti.appendChild(displayMultiplicator);
-      }
-  };
-})();
+      // if (!executed) {
+      //     executed = true;
+      //       let displayMultiplicator = document.createElement("button");
+      //       let newContent = document.createTextNode(`Multiplicator`);
+      //       displayMultiplicator.appendChild(newContent);
+      //       let placeMulti = document.querySelector(".multi");
+      //       placeMulti.appendChild(displayMultiplicator);
+      // }
+
 
