@@ -1,23 +1,34 @@
+body {
+  width: 500px;
+  margin: 20px auto; }
+
 .click {
   display: block;
-  padding: 60px;
+  padding: 70px;
   border-radius: 50%;
   border: 0px solid black;
   background: radial-gradient(circle at 30px 30px, #8D8D8D, black); }
 
 .stage {
   display: inline-block;
-  margin-top: 20%;
-  perspective: 400px;
+  margin-top: 10vh;
+  width: 100px;
+  height: 150px;
+  perspective: 500px;
   perspective-origin: 50% 50%;
-  margin-bottom: 30%; }
+  margin-bottom: 100px; }
 
 .click .shadow {
   position: absolute;
   width: 100%;
   height: 100%;
   background: radial-gradient(circle at 50% 50%, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.1) 40%, rgba(0, 0, 0, 0) 50%);
-  transform: rotateX(90deg) translateZ(-150px);
+  transform: rotateX(90deg) translateZ(-80px);
   z-index: -1; }
+
+.affichage {
+  font-size: 20px;
+  font-weight: bolder;
+  margin-bottom: 200px; }
 
 /*# sourceMappingURL=style.css.map */

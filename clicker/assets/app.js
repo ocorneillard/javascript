@@ -52,9 +52,7 @@ function endBonux() {
 
 function affiche() {
   affichage.innerHTML = score;
-  if (score > (50* multiple)) {
-  something();
-  }
+  // clickH.style.padding = `${score}px`
 
 }
 
