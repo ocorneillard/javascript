@@ -25,3 +25,13 @@ div {
 .italic {
 	font-style: italic;
 }
+
+.infobulle {
+  position : absolute;
+  background-color: white;
+  margin-left : 0px;
+  margin-top : 10px;
+  border : 2px solid black;
+  padding : 5px;
+  border-radius : 5px;
+}
