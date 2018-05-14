@@ -3,6 +3,8 @@
   padding-top : 100px;
 }
 
+/* Ex 1 */
+
 .main input {
   text-decoration : none;
   padding : 20px 0;
@@ -17,23 +19,39 @@
   padding-bottom : 50px;
 }
 
+.sub {
+  padding-bottom : 50px;
+}
 
-
-button {
-  transform : scale(2.5);
+ button {
+  transform : scale(2);
   background-color : white;
   border : none;
   border-radius : 5px;
   padding : 2px 5px;
   transition : ease-in 0.1s;
-  box-shadow: 9px 14px 20px -10px rgba(0,0,0,0.75);
 }
 
-button:hover {
+ button:hover {
   background-color : black;
   color : white;
 }
 
-button:active {
+ button:active {
   transform : scale(2.5) translateY(1px);
+}
+
+/* Ex 2 */
+
+
+.sub2plus {
+  display : inline-block;
+  padding : 10px;
+  margin : 50px 5px 0 0;
+}
+
+.sub2minus {
+  display : inline-block;
+  padding : 10px;
+  margin : 50px 5px 0 0;
 }
