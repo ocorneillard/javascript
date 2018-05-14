@@ -1,11 +1,11 @@
 body {
   margin : 0;
   padding : 0;
+  background : #D7D9D7;
 }
 
 .main {
   text-align : center;
-  padding-top : 100px;
 }
 
 /* Ex 1 */
@@ -123,4 +123,20 @@ body {
   width : auto;
   background : white;
   z-index : 2;  
+}
+
+.ex {
+  border : 1px solid #D7D9D7;
+  padding : 100px 0 0 0;
+  background : white;
+}
+
+.ex3 {
+  border : 1px solid #D7D9D7;
+  padding : 100px 0 100px 0;
+  background : white;
+}
+
+.ex1 {
+  margin-top : 100px;
 }

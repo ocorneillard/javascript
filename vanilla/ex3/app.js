@@ -66,7 +66,7 @@ five.addEventListener('click', (e) => {
 const square = document.querySelector('.square');
 let a = 0;
 let b = 0;
-let c = 0;
+
 document.addEventListener('keydown', (e) => {
   let x = e.keyCode;
 
